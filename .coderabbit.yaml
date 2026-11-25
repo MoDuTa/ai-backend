@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: ko-KR
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  review_status: true
+  collapse_walkthrough: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "^develop$"
+      - "^main$"
+  path_instructions:
+    - path: "**/*"
+      instructions: >-
+        소스, 테스트 데이터, 로그에 자격 증명이나 개인정보가 노출되는지 확인하세요.
+        동작이 바뀌면 정상 경로와 실패 경로의 테스트를 확인하세요.
+        API, 이벤트, 데이터 형식이 바뀌면 기존 호출자에 미치는 영향과 관련 명세의 변경 여부를 확인하세요.
+chat:
+  auto_reply: true
