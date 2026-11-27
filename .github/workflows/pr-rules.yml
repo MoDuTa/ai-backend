@@ -22,14 +22,14 @@ jobs:
             echo "::error::main 대상 PR은 develop에서 열어 주세요."
             exit 1
           fi
-          pattern='^(feat|fix|infra|docs|test|refactor|chore|style)/([0-9]+(\.[0-9]+)*)-[a-z0-9]+(-[a-z0-9]+)*$'
+          pattern='^(feat|fix|infra|docs|test|refactor|chore|style)/([1-9][0-9]*)-[a-z0-9]+(-[a-z0-9]+)*$'
           if [[ ! "$BRANCH" =~ $pattern ]]; then
-            echo "::error::브랜치 예시: docs/2.3.1-model-input"
+            echo "::error::브랜치명에 GitHub 이슈 번호를 넣어 주세요. 예: chore/12-init-env"
             exit 1
           fi
-          wbs="${BASH_REMATCH[2]}"
-          prefix="[$wbs] "
+          issue_number="${BASH_REMATCH[2]}"
+          prefix="[#$issue_number] "
           if [[ "$TITLE" != "$prefix"* || ! "${TITLE#"$prefix"}" =~ [^[:space:]] ]]; then
-            echo "::error::PR 제목은 브랜치와 동일한 [WBS번호] 작업명 형식으로 적어 주세요."
+            echo "::error::PR 제목은 브랜치와 같은 이슈 번호로 시작하고 작업명을 포함해야 합니다. 예: ${prefix}초기 환경 구축"
             exit 1
           fi
