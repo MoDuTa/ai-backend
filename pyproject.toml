@@ -8,12 +8,12 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "fastapi>=0.165.0",
+    "fastapi==0.150.0",
     "lightgbm>=4.7.0",
     "mlflow>=3.18.0",
     "numpy>=2.5.5",
     "pandas>=3.1.1",
-    "prefect>=3.8.8",
+    "prefect==3.8.8",
     "pyarrow>=26.0.1",
     "pydantic>=2.14.4",
     "requests>=2.34.2",
