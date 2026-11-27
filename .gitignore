@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+data/
+
+# Model artifacts
+artifacts/
+*.pkl
+*.joblib
+*.parquet
+
+# MLflow
+mlruns/
+mlartifacts/
+mlflow.db*
+
+# Prefect
+.prefect/
+
+# Local database
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+.pytest_cache/
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db
