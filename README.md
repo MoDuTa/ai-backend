@@ -4,7 +4,7 @@
 
 ## 협업과 검증
 
-이 변경의 기준은 [공통 협업 규칙 개정본](https://github.com/MoDuTa/.github/blob/0cbbc8c62c5b1e0bfc2eb9024738cb1073a381f7/CONTRIBUTING.md)입니다
+이 변경의 기준은 [공통 협업 규칙 개정본](https://github.com/MoDuTa/.github/blob/0f73a1af1716771f4b8ea62055ce777ae361db1b/CONTRIBUTING.md)입니다
 
 - 작업 브랜치 예시: `feat/rental`, `fix/12-return-status`. WBS 번호는 필수가 아닙니다
 - PR 제목 예시: `feat: 대여 기능 추가`, `fix(auth): 만료 처리 수정`
